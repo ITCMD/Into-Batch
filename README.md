@@ -3,4 +3,4 @@ Windows Batch code that lets you convert any program into a script you can put i
 
 basic syntax: into-batch.bat filename.txt
 
-note: soon going to add different directory support.
+note: now supports different directory!
