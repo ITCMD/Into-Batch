@@ -6,6 +6,22 @@ if /i "%~1"=="/?" goto help
 if /i "%~1"=="/help" goto help
 if /i "%~1"=="/F" shift & goto force
 if /i "%~2"=="/F" goto force
+echo %~1|find "\" >nul
+if %errorlevel%==1 goto skip
+for %%i in ("%~1") do SET "mypath=%%~Pi"
+for %%i in ("%~1") do SET "mydrive=%%~di"
+for %%i in ("%~1") do SET "filenme=%%~ni"
+for %%i in ("%~1") do SET "ext=%%~xi"
+set filenme=%filenme%%ext%
+pushd %mydrive%%mypath%
+echo %filenme%|find " " >nul
+if %errorlevel%==0 set filenme="%filnme%"
+call :skip %filenme% %2 %3 %4
+exit /b
+
+
+
+:skip
 set num=%random%%random%%random%%random%%random%%random%
 set var=%1
 echo %var%| findstr /c:" " >nul
