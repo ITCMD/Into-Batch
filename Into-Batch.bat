@@ -92,9 +92,8 @@ exit /b
 
 
 :help
-
 set ThisFile=%0
-if "%~p%"=="\Windows\System32\" set ThisFile="%~n"
+if "%~p0"=="\Windows\System32\" set ThisFile="%~n0"
 
 echo This tool allows you to store any type of file inside your batch code.
 echo the Syntax is:  %ThisFile%  FileName [/F] [/S]
