@@ -15,7 +15,7 @@ for %%i in ("%~1") do SET "ext=%%~xi"
 set filenme=%filenme%%ext%
 pushd "%mydrive%%mypath%"
 echo %filenme%|find " " >nul
-if %errorlevel%==0 set filenme="%filnme%"
+if %errorlevel%==0 set filenme="%filenme%"
 call :skip %filenme% %2 %3 %4
 exit /b
 
