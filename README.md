@@ -5,4 +5,4 @@ basic syntax: into-batch.bat filename.txt
 
 note: now supports different directory!
 
-**Update coming soon to increase speed**
+**Updated version (increased speed with useage of exe) here: https://github.com/ITCMD/In2Batch**
